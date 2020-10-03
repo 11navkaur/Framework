@@ -1,6 +1,7 @@
 package com.walmart.testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -46,7 +47,7 @@ public class PersonalSettingsTest extends Base {
 		myaccountpage.clickOnPersonalSettingsLink();
 	}
 
-	@Test(enabled=false)
+	@Test
 	public void editPersonalInformationTest()
 	{
 		personalsettingspage.editPersonalInformation("brucenew", "waynenew", "L6L0V0");
@@ -58,7 +59,7 @@ public class PersonalSettingsTest extends Base {
 		personalsettingspage.cancelEditPersonalInformation("brucenew", "waynefirst", "L9O0B3");
 	}
 
-	@Test
+	@Test (enabled=false)
 	public void editEmailTest()
 	{
 		personalsettingspage.editEmail("brucewayne2@mailinator.com");
@@ -66,29 +67,36 @@ public class PersonalSettingsTest extends Base {
 		Assert.assertTrue(false, "brucewayne2@mailinator.com");
 	}
 
-	@Test
+	@Test (enabled=false)
 	public void changePasswordTest()
 	{
 		personalsettingspage.changePassword("Batman@123", "Batman@1234", "Batman@1234");
 	}
-
-	@Test
+ 
+	@Test (enabled=false)
 	public void changeLanguageToEnglishTest()
 	{
 		personalsettingspage.editEnglishLanguage();
 	}
 
 
-	@Test
+	@Test (enabled=false)
 	public void changeLaguageToFrenchTest()
 	{
 		personalsettingspage.editFrenchLanguage();
 	}
 
-	@Test
+	@Test (enabled=false)
 	public void winAndDiscountcodeTest()
 	{
 		personalsettingspage.addWinAndDiscount("axn", "2017wal");
+	}
+
+	@AfterMethod
+	public void tearDown() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		driver.close();
 	}
 
 

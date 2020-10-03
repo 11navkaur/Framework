@@ -1,5 +1,6 @@
 package com.walmart.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -25,9 +26,9 @@ public class AddressesPage extends Base {
 	WebElement shippingcity;
 
 	
-	@FindBy(id="provinces")
+	/*@FindBy(id="provinces")
 	WebElement province;
-	Select shippingprovince = new Select(province);
+	Select shippingprovince = new Select(province);*/
 	
 	@FindBy(id="shipping-postal-code")
 	WebElement shippingpostalcode;
@@ -38,11 +39,12 @@ public class AddressesPage extends Base {
 	@FindBy(id="save-address-btn")
 	WebElement shippingsavebutton;
 	
-	@FindBy(id="edit-address-btn")
+	@FindBy(xpath="//a[@id='edit-address-btn']")
 	WebElement editshipping ;
 	
 	@FindBy(id="remove-address-btn")
 	WebElement removeshipping ;
+	
 	
 	
 	public AddressesPage()
@@ -83,7 +85,9 @@ public class AddressesPage extends Base {
 	
 	public void selectProvince(String province)
 	{
-		shippingprovince.deselectAll();
+		
+		//shippingprovince.deselectAll();
+		Select shippingprovince = new Select(driver.findElement(By.id("provinces")));
 		shippingprovince.selectByVisibleText(province);
 	}
 	
@@ -101,7 +105,10 @@ public class AddressesPage extends Base {
 	
 	public void clickOnSaveButton()
 	{
-		shippingsavebutton.click();
+		shippingsavebutton.click();	
+		
+		
+	
 	}
 	
 	

@@ -80,7 +80,7 @@ public class Base {
 		 action = new Actions(driver);
 		  wait = new WebDriverWait(driver,5000);
 		  
-		  driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
+		 driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
 	
 		
 	}

@@ -26,14 +26,14 @@ public class DealsAndSalesPage extends Base{
 	@FindBy(xpath="//div[5]//div[2]//section[1]//div[2]//div[2]//div[1]//article[2]//div[1]//button[1]//span[2]")
 	WebElement addthirditemtocart;
 	
-	@FindBy(xpath="//html//body//div//div//div//div//div//div//div//div//div//div//div//h1")
+	@FindBy(xpath="//body/div[2]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/h1[1]")
 	WebElement headingofitemincart;
 	
 	
 	
 	//@FindBy(xpath="//div[4]//div[2]//section[1]//div[2]//div[2]//div[1]//article[1]//a[1]//div[3]//span[2]//div[1]//div[1]")
 	//@FindBy(css="div.js-content:nth-child(2) div.css-10wd6bz.evlleax1 div.css-186cfsd.evlleax2 div.css-0.eewy8oa0:nth-child(3) div.css-12rl50h.eewy8oa2:nth-child(3) div.css-18f77yw.eewy8oa4 div.css-1rfwmbp.eewy8oa5 div.css-w3hdpp.e1cd9jig0 div.css-j7qwjs.e1yn5b3f0 div.css-5ki3bg.e1yn5b3f5 div.css-18u0794.e1906lj50 div.css-j7qwjs.e1906lj51 div.css-k008qs.e1ufqjyx0 span.css-s3vnpn.esdkp3p2 > span.css-2vqe5n.esdkp3p0")
-	@FindBy(xpath="//span[contains(text(),'$12.96')]")
+	@FindBy(xpath="//body/div[2]/div[1]/div[4]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/span[1]/span[1]")
 	WebElement firstdealprice;
 
 	@FindBy(xpath="//body/div/div/div/div/div/div[4]/div[2]/section[1]/div[2]/div[2]/div[1]/article[1]/a[1]/div[3]/div[1]")
@@ -55,7 +55,7 @@ public class DealsAndSalesPage extends Base{
 	@FindBy(xpath="//a[contains(text(),'Continue shopping')]")
 	WebElement dealspagecontinueshopping;
 	
-	@FindBy(xpath="//button[@data-automation='increase-qty']")
+	@FindBy(xpath="//button[contains(text(),'+')]")
 	WebElement increasequantity;
 	
 	@FindBy(xpath="//h2[@class='thumb-header']")
@@ -124,7 +124,7 @@ public class DealsAndSalesPage extends Base{
 	
 	public void addMultipleItemsToCart()
 	{
-		String[] itemsneeded= {"Homeholiday Resin Realistic Human Mini Skull Decoration Prop Skeleton Head Halloween Coffee Bars Ornament","Ustyle Halloween Motorcycle Skull Neck Face Mask Seamless Headwear Hiking Cycling Scarf Ski Cap Snowboard Headband"};
+		String[] itemsneeded= {"Gyrocopters PRO 6.0 Off-Road Hoverboard - UL 2272 Certified with Bluetooth, LED wheels, APP, No Fall Technology, Front and Back lights (Black)","IMGadgets- Dual Wireless Charger for Smart Watch and Other Qi-Enabled Smart Devices"};
 		
 		for(int i=0; i<dealpageitemname.size(); i++)
 		{

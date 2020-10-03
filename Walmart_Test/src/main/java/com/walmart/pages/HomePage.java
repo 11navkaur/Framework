@@ -41,8 +41,8 @@ public class HomePage extends Base{
 	WebElement dealslink;
 
 	
-	@FindBy(xpath="//body//button[2]")
-	WebElement searchicon;
+	//@FindBy(xpath="//body//button[2]")
+	//WebElement searchicon;
 
 	@FindBy(xpath="//a[@id='nav-cart']//img[@id='shopping-cart-icon']")
 	WebElement carticon;
@@ -145,7 +145,7 @@ WebElement firstproductname;
 		return new DealsAndSalesPage();
 	}
 
-	public void searchproduct(String itemforsearch)
+/*	public void searchproduct(String itemforsearch)
 	{
 		searchbox.sendKeys(itemforsearch);
 		searchicon.click();
@@ -155,7 +155,7 @@ WebElement firstproductname;
 		//action.do
 		//action.keyDown(Keys.CONTROL).click();
 	
-	}
+	}*/
 	public void clickOnCart()
 	{
 		carticon.click();
@@ -226,16 +226,14 @@ WebElement firstproductname;
 		sortby.click();
 		driver.findElement(By.xpath("//span[contains(text(),'"+sort+"')]")).click();
 	}
-	public boolean filterByNewArrivals() throws InterruptedException
+	public void filterByNewArrivals() 
 	{
 		js.executeScript("arguments[0].scrollIntoView();",filterbynewarrivals);
 		filterbynewarrivals.click();
 		WebElement filtercheckox=  driver.findElement(By.xpath("//span[@class='css-go8rfs eu1nysk1' and contains(text(),'New Arrivals')]"));
 				filtercheckox.click();
 				
-				js.executeScript("arguments[0].scrollIntoView();",filterbynewarrivals);
-				Thread.sleep(2000);
-			return	filtercheckox.isSelected();
+				
 				
 	}
 	public void filterByCategory( )

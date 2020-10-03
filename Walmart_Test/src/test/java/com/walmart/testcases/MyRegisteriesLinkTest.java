@@ -1,6 +1,7 @@
 package com.walmart.testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -43,7 +44,7 @@ public class MyRegisteriesLinkTest extends Base {
 		
     }
 	
-	@Test(enabled=false)
+	@Test
 	public void createBabyRegisteryTest()
 	{
 		myregistriespage.clickOnBabyRegistryLink();
@@ -63,7 +64,7 @@ public class MyRegisteriesLinkTest extends Base {
 		//Assert.assertEquals(true, " Registry Search Results");
 		Assert.assertTrue(true, "Registry Search Results");
 	}
-	@Test(enabled=false)
+	@Test
 	public void findRegistryWithExactMatch()
 	{
 		myregistriespage.enterFirstName("ganga");
@@ -74,6 +75,11 @@ public class MyRegisteriesLinkTest extends Base {
 		Assert.assertEquals(true, " Registry Search Results");
 	}
 	
-	
+	@AfterMethod
+	@Test 
+	public void tearDown()
+	{
+		driver.close();
+	}
 }
 

@@ -21,6 +21,11 @@ public class WebEventListner extends Base implements WebDriverEventListener {
 	public void afterNavigateTo(String url, WebDriver driver) {
 		System.out.println("Navigated to:'" + url + "'");
 	}
+	
+	public void OnTestStart(WebDriverEventListener result)
+	{
+		
+	}
 
 	public void beforeChangeValueOf(WebElement element, WebDriver driver) {
 		System.out.println("Value of the:" + element.toString() + " before any changes made");

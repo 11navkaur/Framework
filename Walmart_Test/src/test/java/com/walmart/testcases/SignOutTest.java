@@ -1,6 +1,7 @@
 package com.walmart.testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -52,4 +53,12 @@ public class SignOutTest extends Base{
 		
 		Assert.assertEquals(title, "Walmart Canada");
 	}
-}
+
+	@AfterMethod
+	public void tearDown() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		driver.close();
+	}
+
+	}

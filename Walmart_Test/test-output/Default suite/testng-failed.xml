@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.walmart.testcases.JoinNowTest">
+      <class name="com.walmart.testcases.PersonalSettingsTest">
         <methods>
           <include name="setUp"/>
-          <include name="email" invocation-numbers="0 1"/>
+          <include name="editPersonalInformationTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.walmart.testcases.JoinNowTest -->
+      </class> <!-- com.walmart.testcases.PersonalSettingsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

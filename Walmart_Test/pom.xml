@@ -4,6 +4,8 @@
   <artifactId>Walmart_Test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  
+  
    <dependencies>
   
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -85,12 +87,20 @@
     <version>3.1.2</version>
 </dependency>
 
+
+
 <dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.0</version>
+</dependency>
+
+  
+  <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
-    <version>3.0.0</version>
+    <version>3.1.5</version>
 </dependency>
-  
   
   
   

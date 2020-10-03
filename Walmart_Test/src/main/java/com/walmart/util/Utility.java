@@ -24,8 +24,8 @@ import com.walmart.base.Base;
 
 public class Utility extends Base{
 	
-	static public long Page_Load_Timeout=25;
-	static public long Implicit_Wait =25;
+	static public long Page_Load_Timeout=30;
+	static public long Implicit_Wait =30;
 	
 	public static String TESTDATA_SHEET_PATH = "C:\\Users\\Nav\\eclipse-workspace\\Walmart_Test\\src\\main\\java\\com\\walmart\\testdata\\walmart.xlsx";
 	static Workbook book;

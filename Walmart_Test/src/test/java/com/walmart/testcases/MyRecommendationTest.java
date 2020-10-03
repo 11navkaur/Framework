@@ -1,6 +1,7 @@
 package com.walmart.testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -54,7 +55,12 @@ public class MyRecommendationTest extends Base{
 
 	}
 
-
+	@AfterMethod
+	@Test 
+	public void tearDown()
+	{
+		driver.close();
+	}
 
 
 
